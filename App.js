@@ -1,11 +1,13 @@
 import {View, Text, SafeAreaView} from 'react-native';
 import React from 'react';
+import {AppNavigation} from './src/navigation/appNavigation';
+import {AppProvider} from './src/providers/AppProvider';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <Text className="bg-red-800">App</Text>
-    </SafeAreaView>
+    <AppProvider>
+      <AppNavigation />
+    </AppProvider>
   );
 };
 
